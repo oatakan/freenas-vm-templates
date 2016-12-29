@@ -12,7 +12,7 @@
         "files": true,
         "fetch": [
             {
-                "name": "os",
+                "name": "rhel-guest-image-7.3-35.x86_64",
                 "url": "http://192.168.1.153:8000/rhel-guest-image-7.3-35.x86_64.img.gz",
                 "sha256": "0201310b281e5a7d71395f421fd74394e13d8c4cf6fa768d0cd854ec8da7eb2a",
                 "size": 536625144
