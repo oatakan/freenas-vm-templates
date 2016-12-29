@@ -39,7 +39,7 @@
             "properties": {
                 "size": 10737418240,
                 "mode": "AHCI",
-                "source": "os"
+                "source": "rhel-guest-image-7.3-35.x86_64"
             }
         }
     ],
