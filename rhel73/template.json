@@ -13,9 +13,9 @@
         "fetch": [
             {
                 "name": "os",
-                "url": "http://download.freenas.org/vm-templates/centos-7-1511/os.img.gz",
-                "sha256": "8a4c5ce67c5185af2d89241510792ae08daeaa0fc29a04c962db187929baec34",
-                "size": 426981794
+                "url": "http://192.168.1.153:8000/rhel-guest-image-7.3-35.x86_64.img.gz",
+                "sha256": "0201310b281e5a7d71395f421fd74394e13d8c4cf6fa768d0cd854ec8da7eb2a",
+                "size": 536625144
             }
         ]
     },
@@ -37,7 +37,7 @@
             "type": "DISK",
             "name": "os",
             "properties": {
-                "size": 8589934592,
+                "size": 10737418240,
                 "mode": "AHCI",
                 "source": "os"
             }
