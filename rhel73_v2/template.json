@@ -1,8 +1,8 @@
 {
     "template": {
-        "name": "rhel73",
+        "name": "rhel73_v2",
         "author": "Orcun Atakan <oatakan@gmail.com>",
-        "description": "RHEL 7.3 image",
+        "description": "RHEL 7.3 v2 image",
         "created_at": {
             "$date": "2016-12-28T19:20:00"
         },
@@ -12,10 +12,10 @@
         "files": true,
         "fetch": [
             {
-                "name": "rhel73",
-                "url": "http://192.168.1.153:8000/rhel73.img.gz",
-                "sha256": "e9188a39603f37c6e7b099e4ee6b02c7739525dc731d6ef9b24ad56c7a4174dc",
-                "size": 682122444
+                "name": "rhel73_v2",
+                "url": "http://192.168.1.153:8000/rhel73_v2.img.gz",
+                "sha256": "8da3029d5481d387a4265f24a837947acae69d0b4a64c74756e22b02df756f72",
+                "size": 717982771
             }
         ]
     },
@@ -41,7 +41,7 @@
             "properties": {
                 "resolution": "1024x768",
                 "vnc_enabled": true,
-                "vnc_port": 6666
+                "vnc_port": 6667
             }
         },
         {
@@ -50,7 +50,7 @@
             "properties": {
                 "size": 8589934592,
                 "mode": "AHCI",
-                "source": "rhel73"
+                "source": "rhel73_v2"
             }
         }
     ],
