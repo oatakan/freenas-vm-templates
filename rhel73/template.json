@@ -7,39 +7,50 @@
             "$date": "2016-12-28T19:20:00"
         },
         "updated_at": {
-            "$date": "2016-12-28T19:20:00"
+            "$date": "2016-12-29T19:20:00"
         },
         "files": true,
         "fetch": [
             {
-                "name": "rhel-guest-image-7.3-35.x86_64",
-                "url": "http://192.168.1.153:8000/rhel-guest-image-7.3-35.x86_64.img.gz",
-                "sha256": "0201310b281e5a7d71395f421fd74394e13d8c4cf6fa768d0cd854ec8da7eb2a",
+                "name": "rhel73",
+                "url": "http://192.168.1.153:8000/rhel73.img.gz",
+                "sha256": "e9188a39603f37c6e7b099e4ee6b02c7739525dc731d6ef9b24ad56c7a4174dc",
                 "size": 536625144
             }
         ]
     },
     "config": {
         "ncpus": 1,
-        "bootloader": "GRUB",
+        "bootloader": "UEFI",
         "memsize": 1024,
-        "boot_directory": "grub"
+        "boot_device": "os"
     },
     "devices": [
         {
             "type": "NIC",
             "name": "nic",
             "properties": {
-                "mode": "NAT"
+                "mode": "BRIDGED",
+                "device": "E1000",
+                "bridge": "default"
+            }
+        },
+        {
+            "type": "GRAPHICS",
+            "name": "framebuffer",
+            "properties": {
+                "resolution": "1024x768",
+                "vnc_enabled": true,
+                "vnc_port": 6666
             }
         },
         {
             "type": "DISK",
             "name": "os",
             "properties": {
-                "size": 10737418240,
+                "size": 8589934592,
                 "mode": "AHCI",
-                "source": "rhel-guest-image-7.3-35.x86_64"
+                "source": "rhel73"
             }
         }
     ],
